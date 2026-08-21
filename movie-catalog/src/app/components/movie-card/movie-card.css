@@ -1,0 +1,32 @@
+.movie-card {
+  width: 250px;
+  padding: 20px;
+  margin: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card h2 {
+  margin-top: 0;
+  color: #222;
+}
+
+.movie-card p {
+  margin: 8px 0;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #125ca1;
+}

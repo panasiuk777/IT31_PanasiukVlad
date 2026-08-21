@@ -1,0 +1,15 @@
+<section>
+  <h1>Каталог фільмів</h1>
+
+  <div class="movies-list">
+    @for (movie of movies; track movie.title) {
+      <app-movie-card
+        [title]="movie.title"
+        [genre]="movie.genre"
+        [year]="movie.year"
+        [rating]="movie.rating"
+        (addedToFavorites)="onMovieAdded()">
+      </app-movie-card>
+    }
+  </div>
+</section>

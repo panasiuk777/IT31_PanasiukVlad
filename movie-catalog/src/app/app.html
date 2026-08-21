@@ -1,0 +1,13 @@
+<app-header [siteName]="siteName"></app-header>
+
+<main>
+  <app-movies (movieAdded)="onMovieAdded()"></app-movies>
+
+  @if (message) {
+    <div class="message">
+      {{ message }}
+    </div>
+  }
+</main>
+
+<app-footer></app-footer>
