@@ -1,0 +1,23 @@
+<div *ngIf="item; else notFound">
+
+  <h1>{{ item.title }}</h1>
+
+  <p>
+    Викладач: {{ item.teacher }}
+  </p>
+
+  <p>
+    Тривалість: {{ item.duration }} годин
+  </p>
+
+</div>
+
+<ng-template #notFound>
+
+  <h1>Курс не знайдено</h1>
+
+  <p>
+    Курсу з таким ID не існує.
+  </p>
+
+</ng-template>
