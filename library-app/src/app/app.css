@@ -1,0 +1,114 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.header {
+  background: #172554;
+  color: white;
+  padding: 22px;
+  text-align: center;
+}
+
+.header h1 {
+  margin-top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #93c5fd;
+}
+
+.container {
+  max-width: 1000px;
+  min-height: 70vh;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.welcome,
+.book-card,
+.book-form {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px #00000010;
+}
+
+.welcome {
+  text-align: center;
+  padding: 55px 20px;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.book-card h3 {
+  color: #1d4ed8;
+}
+
+.button,
+button {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 7px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 5px 5px 5px 0;
+}
+
+button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+}
+
+.book-form input,
+.book-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.error {
+  color: #dc2626;
+  margin: 0 0 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #e2e8f0;
+}

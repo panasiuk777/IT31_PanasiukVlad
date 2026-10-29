@@ -1,0 +1,12 @@
+
+<section *ngIf="book; else notFound" class="book-card">
+  <h2>{{ book.title }}</h2>
+  <p><strong>Автор:</strong> {{ book.author }}</p>
+  <p><strong>Опис:</strong> {{ book.description }}</p>
+  <a routerLink="/books" class="button">Назад до каталогу</a>
+</section>
+
+<ng-template #notFound>
+  <h2>Книгу не знайдено 😕</h2>
+  <a routerLink="/books">Повернутися до каталогу</a>
+</ng-template>

@@ -1,0 +1,58 @@
+
+<h2>Додати нову книгу</h2>
+
+<form #itemForm="ngForm" (ngSubmit)="addBook()" class="book-form">
+  <label for="title">Назва книги</label>
+  <input
+    id="title"
+    name="title"
+    [(ngModel)]="title"
+    #titleField="ngModel"
+    required
+    minlength="2"
+    maxlength="100"
+  />
+
+  <p class="error" *ngIf="titleField.invalid && (titleField.touched || submitted)">
+    Введи назву довжиною від 2 до 100 символів.
+  </p>
+
+  <label for="author">Автор</label>
+  <input
+    id="author"
+    name="author"
+    [(ngModel)]="author"
+    #authorField="ngModel"
+    required
+    minlength="2"
+    maxlength="80"
+  />
+
+  <p class="error" *ngIf="authorField.invalid && (authorField.touched || submitted)">
+    Введи ім'я автора довжиною від 2 до 80 символів.
+  </p>
+
+  <label for="description">Опис книги</label>
+  <textarea
+    id="description"
+    name="description"
+    [(ngModel)]="description"
+    #descriptionField="ngModel"
+    required
+    minlength="5"
+    maxlength="500"
+    rows="5"
+  ></textarea>
+
+  <p class="error" *ngIf="descriptionField.invalid && (descriptionField.touched || submitted)">
+    Опис має містити від 5 до 500 символів.
+  </p>
+
+  <button type="submit" [disabled]="itemForm.invalid">
+    Додати книгу
+  </button>
+
+  <button type="button" (click)="itemForm.resetForm(); submitted = false">
+    Очистити форму
+  </button>
+</form>
